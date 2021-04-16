@@ -1,0 +1,37 @@
+.colorStyleClass{
+color:  red;
+}
+
+.boldStyleClass{
+
+    font-weight: bold;
+}
+
+.obliqueStyleClass{
+    font-style: oblique;
+}
+
+.variantStyleClass{
+    font-variant: small-caps;
+}
+
+h1{
+    color: rgb(2, 5, 32);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+table{
+    color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+}
+
+tr.header{
+    background-color: lightgreen;
+}

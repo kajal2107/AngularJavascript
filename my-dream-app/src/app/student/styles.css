@@ -1,0 +1,20 @@
+h1{
+    color: rgb(48, 28, 2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+table{
+    color: rgb(223, 45, 21);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+}
+
+tr.header{
+    background-color: lightgreen;
+}

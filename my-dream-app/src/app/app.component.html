@@ -1,0 +1,59 @@
+<h1>Hello {{name}}</h1>
+<h2>{{1+4}}</h2>
+<h2>{{"Hii "+name}}</h2>
+  <h2>{{name.toUpperCase()}}</h2>
+  <h3>{{WelcomeMessage()}}</h3>
+
+  <button style="color: red; background-color: rosybrown;"[style.font-size.px]="buttonTextsize" [style.font-weight]="applyBold">Submit</button><br><br><br>
+  <button style="color: green;"[ngStyle]="applyStyle()">Multiple Inline Example</button><br><br>
+ 
+  <input [id]="myId" type="text" value="Kajal"> <br><br>
+
+  <button class="colorStyleClass">Button By using Css Class</button><br><br>
+  <button class="colorStyleClass"[class.boldStyleClass]="applyBoldStyleClass">Using Class Binding</button><br><br>
+  <button class="colorStyleClass"[class.boldStyleClass]="!applyBoldStyleClass">Using Class Binding</button><br><br>
+  <button class="colorStyleClass"[style.font-size.px]=20 [class]="classesToApply">Using Class Binding and apply alll the css properties</button><br><br>
+  <button class="colorStyleClass"[style.font-size.px]=20 [ngClass]="addStyleClasses()">Multiple class binding using ng directive</button><br><br>
+  <button (click)='onClick()'>Click Event Binding</button>
+  {{message}}<br><br>
+  <input type="text" [(ngModel)]="name1">
+  {{name1}}<br><br>
+  <h3>----------------------------------------------------------Table Creation Using Other Component------------------------------------------------------------------</h3>
+  <div>
+    <h2>{{Heading}}</h2>
+    <my-student></my-student>
+  </div><br><br>
+ 
+  <h1>{{channel}}</h1>
+  <h1>----------------------------------------------------------Structural Directive ngFor---------------------------------------------</h1>
+<div *ngFor="let nameiterate of names;index as i">
+<h3>{{i}}   {{nameiterate}}</h3>
+</div>
+<br><br>
+<h1>----------------------------------------------------------Structural Directive ngSwitch---------------------------------</h1>
+<div [ngSwitch]="fruit">
+<div *ngSwitchCase="'orange'">Orange Fruit</div>
+<div *ngSwitchCase="'apple'">Apple Fruit</div>
+<div *ngSwitchDefault>Select Again</div>
+<br><br>
+<h1>----------------------------------------------------------Structural Directive ngIf---------------------------------</h1>
+<button (click)="toggleSwitch()">Bulb</button><br><br>
+<div *ngIf="switch;then switchOn else switchOff"></div>
+<ng-template #switchOn>Bulb is Switched on</ng-template>
+<ng-template #switchOff>Bulb is Switched off</ng-template><br><br>
+<h1>----------------------------------------------------------Angular Pipes---------------------------------</h1>
+<h2>{{angularpipes | uppercase}}</h2><br>
+<h3>Date Conversion of 01/05/2020 by using angular pipes</h3>
+<h2>{{dob | date:'fullDate'}}</h2><br><br>
+<h3>Date Conversion of 200.652 to rupees by using angular pipes</h3>
+<h2>{{amount | currency:'INR':'symbol'}}</h2>
+<h2>{{amount | currency:'USD':'symbol'}}</h2><br><br>
+<h3>Date Conversion of 0.652 to Percentage by using angular pipes</h3>
+<h2>{{percentage | percent}}</h2>
+<h2>{{percentage | percent:'1.2-2'}}</h2><br><br>
+<h1>------------------------------------------------Parent child Interaction Component---------------------------------</h1>
+<app-test [parentName]="pname"></app-test>
+<h1>------------------------------------------------Angular LifeCycle Hooks---------------------------------</h1>
+Your Text :<input type="text" [(ngModel)]="userText">
+<br><br>
+<simple [simpleInput]='userText'></simple>
